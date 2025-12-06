@@ -1,0 +1,29 @@
+[
+  {
+    "id": "S1",
+    "name": "Grounded Query",
+    "query": "What is my account type?",
+    "response": "Premium",
+    "grounding_score": 1.0,
+    "relevance_score": 0.91,
+    "pisa_blocked": false
+  },
+  {
+    "id": "S2",
+    "name": "Fabricated Data Query",
+    "query": "How much did I spend on Healthcare in January 2024?",
+    "response": "0",
+    "grounding_score": 0.12,
+    "relevance_score": 0.02,
+    "pisa_blocked": true
+  },
+  {
+    "id": "S3",
+    "name": "Partial Data Query",
+    "query": "What was my highest spending category in January?",
+    "response": "Travel",
+    "grounding_score": 1.0,
+    "relevance_score": 0.97,
+    "pisa_blocked": false
+  }
+]

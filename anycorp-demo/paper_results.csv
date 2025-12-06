@@ -1,0 +1,7 @@
+Layer,System,Scenarios,Attack Success Rate (%),Mean Defense Quality
+Information Boundary,Baseline,6,100.0,0.67
+Information Boundary,PISA,6,83.3,0.50
+Prompt Integrity,Baseline,7,57.1,1.29
+Prompt Integrity,PISA,7,42.9,0.57
+Semantic Verification,Baseline,7,71.4,0.29
+Semantic Verification,PISA,7,57.1,0.00

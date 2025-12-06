@@ -1,0 +1,41 @@
+{
+  "overall": {
+    "total_tests": 9,
+    "baseline_score": 44.444444444444436,
+    "pisa_score": 94.44444444444446,
+    "improvement": 50.00000000000002
+  },
+  "layers": {
+    "prompt_integrity": {
+      "layer": "Prompt Integrity",
+      "total_tests": 3,
+      "baseline_blocked": 2,
+      "baseline_score": 66.66666666666666,
+      "pisa_blocked": 3,
+      "pisa_score": 100.0,
+      "improvement": 33.33333333333334
+    },
+    "information_boundary": {
+      "layer": "Information Boundary",
+      "total_tests": 3,
+      "baseline_protected": 1,
+      "baseline_leaked": 2,
+      "baseline_score": 33.33333333333333,
+      "pisa_anonymized": 2,
+      "pisa_leaked": 0,
+      "pisa_score": 100.0,
+      "improvement": 66.66666666666667
+    },
+    "semantic_verification": {
+      "layer": "Semantic Verification",
+      "total_tests": 3,
+      "baseline_score": 33.33333333333333,
+      "pisa_blocked": 1,
+      "pisa_score": 83.33333333333334,
+      "limitations": 1,
+      "limitation_note": "S3: Grounding checks accuracy but not completeness",
+      "avg_grounding_score": 0.7066666666666667,
+      "improvement": 50.000000000000014
+    }
+  }
+}

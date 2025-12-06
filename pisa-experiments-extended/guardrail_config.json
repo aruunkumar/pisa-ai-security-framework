@@ -1,0 +1,130 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "bf206091-7cd0-47ba-a61a-7d540daa5869",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Fri, 05 Dec 2025 13:15:20 GMT",
+      "content-type": "application/json",
+      "content-length": "4341",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "bf206091-7cd0-47ba-a61a-7d540daa5869"
+    },
+    "RetryAttempts": 0
+  },
+  "name": "unrelated-advice",
+  "description": "Prevents the model from providing fiduciary or relationship advice.",
+  "guardrailId": "hye7bokv9fbw",
+  "guardrailArn": "arn:aws:bedrock:us-east-1:384204514070:guardrail/hye7bokv9fbw",
+  "version": "DRAFT",
+  "status": "READY",
+  "topicPolicy": {
+    "topics": [
+      {
+        "name": "Fiduciary Advice",
+        "definition": "Providing personalized advice or recommendations on managing financial assets, investments, or trusts in a fiduciary capacity.",
+        "examples": [
+          "What stocks should I invest in for my retirement?",
+          "Is it a good idea to put my money in a mutual fund?",
+          "How should I allocate my 401(k) investments?"
+        ],
+        "type": "DENY"
+      },
+      {
+        "name": "Romantic Advice",
+        "definition": "Providing personalized advice on relationships, valentines day gifts, any relationship related advice.",
+        "examples": [
+          "What gifts should I buy for Valentines day?",
+          "How to be a good spouse?"
+        ],
+        "type": "DENY"
+      }
+    ],
+    "tier": {
+      "tierName": "CLASSIC"
+    }
+  },
+  "contentPolicy": {
+    "filters": [
+      {
+        "type": "VIOLENCE",
+        "inputStrength": "HIGH",
+        "outputStrength": "HIGH"
+      },
+      {
+        "type": "PROMPT_ATTACK",
+        "inputStrength": "HIGH",
+        "outputStrength": "NONE"
+      },
+      {
+        "type": "MISCONDUCT",
+        "inputStrength": "HIGH",
+        "outputStrength": "HIGH"
+      },
+      {
+        "type": "HATE",
+        "inputStrength": "HIGH",
+        "outputStrength": "HIGH"
+      },
+      {
+        "type": "SEXUAL",
+        "inputStrength": "HIGH",
+        "outputStrength": "HIGH"
+      },
+      {
+        "type": "INSULTS",
+        "inputStrength": "HIGH",
+        "outputStrength": "HIGH"
+      }
+    ],
+    "tier": {
+      "tierName": "CLASSIC"
+    }
+  },
+  "sensitiveInformationPolicy": {
+    "piiEntities": [
+      {
+        "type": "EMAIL",
+        "action": "ANONYMIZE"
+      },
+      {
+        "type": "PHONE",
+        "action": "ANONYMIZE"
+      },
+      {
+        "type": "NAME",
+        "action": "ANONYMIZE"
+      },
+      {
+        "type": "CREDIT_DEBIT_CARD_NUMBER",
+        "action": "ANONYMIZE"
+      },
+      {
+        "type": "US_SOCIAL_SECURITY_NUMBER",
+        "action": "BLOCK"
+      },
+      {
+        "type": "US_BANK_ACCOUNT_NUMBER",
+        "action": "BLOCK"
+      }
+    ],
+    "regexes": []
+  },
+  "contextualGroundingPolicy": {
+    "filters": [
+      {
+        "type": "GROUNDING",
+        "threshold": 0.75
+      },
+      {
+        "type": "RELEVANCE",
+        "threshold": 0.75
+      }
+    ]
+  },
+  "createdAt": "2025-05-07 21:24:57.115514+00:00",
+  "updatedAt": "2025-12-04 20:23:50.011212+00:00",
+  "statusReasons": [],
+  "failureRecommendations": [],
+  "blockedInputMessaging": "I can provide general info about AnyCorp Financial's products and services, but can't fully address your request here. For personalized help or detailed questions, please contact our customer service team directly. For security reasons, avoid sharing sensitive information through this channel. If you have a general product question, feel free to ask without including personal details.",
+  "blockedOutputsMessaging": "I can provide general info about AnyCorp Financial's products and services, but can't fully address your request here. For personalized help or detailed questions, please contact our customer service team directly. For security reasons, avoid sharing sensitive information through this channel. If you have a general product question, feel free to ask without including personal details."
+}
